@@ -10,7 +10,7 @@ const Header = () => {
   const [toggle, setToggle] = useState<boolean>(false);
   return (
     <header
-      className={`w-full sticky top-0 flex items-center justify-between px-6 md:px-20 py-2 z-40 ${
+      className={`w-full fixed top-0 flex items-center justify-between px-6 md:px-20 py-2 z-40 ${
         scroll ? "backdrop-blur-md" : ""
       }`}
     >
@@ -31,12 +31,13 @@ const Header = () => {
         <div className="flex items-center justify-center gap-x-8">
           {MENU.map((item) => {
             return (
-              <p
+              <a
+                href={item.path}
                 key={item.id}
                 className="text-white font-Nunito font-semibold text-[15px] cursor-pointer"
               >
                 {item.title}
-              </p>
+              </a>
             );
           })}
         </div>

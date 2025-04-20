@@ -26,7 +26,7 @@ const MainCardSwiper = () => {
   };
 
   return (
-    <div className="w-[120%] md:w-[75%] h-full">
+    <div className="w-[120%] md:w-[75%]">
       <Swiper
         effect={"coverflow"}
         onSwiper={(swiper) => (swiperRef.current = swiper)}

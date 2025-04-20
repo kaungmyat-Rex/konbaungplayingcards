@@ -24,15 +24,12 @@
   --font-Nunito: var(--font-nunito);
   --font-Montserrat: var(--font-montserrat);
   --font-BurmaBold: var(--font-burmaBold);
-}
-
-body {
-  position: relative;
+  --font-SourceSerif: var(--font-sourceSerif);
 }
 
 .bodyMain {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,6 +41,7 @@ body {
     rgba(189, 45, 45, 1) 66%,
     rgba(122, 16, 16, 1) 100%
   );
+  overflow: hidden;
 }
 
 /* humburger menu */

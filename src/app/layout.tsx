@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Nunito } from "next/font/google";
+import { Montserrat, Nunito, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import "./swiper.css";
 import Header from "@/ui/layout/Header";
@@ -25,6 +25,10 @@ const MontserratHeader = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
+const SourceSerif = Source_Serif_4({
+  variable: "--font-sourceSerif",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Konbaung Playing cards",
@@ -40,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${NunitoPrimary.variable} ${MontserratHeader.variable} ${burma.variable} ${burmaBold.variable} antialiased relative`}
+        className={`${NunitoPrimary.variable} ${MontserratHeader.variable} ${burma.variable} ${burmaBold.variable} ${SourceSerif.variable} antialiased relative`}
       >
         <div className="bodyMain"></div>
         <Header />
