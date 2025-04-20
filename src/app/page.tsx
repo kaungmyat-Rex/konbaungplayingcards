@@ -28,7 +28,7 @@ export default function Home() {
             Contact Me
           </h4>
         </div>
-        <div className="flex justify-center items-start md:items-center -mt-10 md:mt-10 px-5 md:px-30 gap-x-10 md:gap-x-20">
+        <div className="flex justify-center items-start md:items-center ml-8 md:ml-0 -mt-10 md:mt-10 px-5 md:px-30 gap-x-10 md:gap-x-20">
           <div className="flex flex-col justify-center items-center md:gap-y-10 gap-y-[60px] md:flex-row md:gap-x-28">
             <div className="flex flex-col justify-center items-center gap-y-1 ">
               <CgProfile color="white" className="text-xl" />
