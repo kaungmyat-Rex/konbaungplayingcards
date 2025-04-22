@@ -1,18 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const useNavScroll = () => {
   const [scroll, setScroll] = useState(false);
-
-  const prev = 124;
+  const prevScrollRef = useRef(0);
+  // const prev = 124;
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log("useEffect mounted");
+
       const currentPosition = Math.floor(window.pageYOffset);
 
-      if (prev > currentPosition) {
-        setScroll(false);
+      if (currentPosition > prevScrollRef.current) {
+        setScroll(true); // scrolling down
       } else {
-        setScroll(true);
+        setScroll(false); // scrolling up
       }
     };
 

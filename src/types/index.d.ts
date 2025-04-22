@@ -10,3 +10,9 @@ export interface CardType {
   ImgPath: string;
   type: number;
 }
+
+interface Card {
+  id: number;
+  card: string;
+  path: string;
+}
