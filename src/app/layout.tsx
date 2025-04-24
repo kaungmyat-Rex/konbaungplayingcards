@@ -16,6 +16,18 @@ const burmaBold = localFont({
   display: "swap",
   variable: "--font-burmaBold",
 });
+
+const elephant = localFont({
+  src: "../../public/fonts/elephantRegular.ttf",
+  display: "swap",
+  variable: "--font-elephant",
+});
+const century = localFont({
+  src: "../../public/fonts/century.ttf",
+  display: "swap",
+  variable: "--font-century",
+});
+
 const NunitoPrimary = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
@@ -44,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${NunitoPrimary.variable} ${MontserratHeader.variable} ${burma.variable} ${burmaBold.variable} ${SourceSerif.variable} antialiased relative`}
+        className={`${NunitoPrimary.variable} ${MontserratHeader.variable} ${burma.variable} ${burmaBold.variable} ${SourceSerif.variable} ${elephant.variable} ${century.variable} antialiased relative`}
       >
         <div className="bodyMain"></div>
         <Header />

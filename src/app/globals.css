@@ -26,6 +26,8 @@
   --font-Montserrat: var(--font-montserrat);
   --font-BurmaBold: var(--font-burmaBold);
   --font-SourceSerif: var(--font-sourceSerif);
+  --font-Elephant: var(--font-elephant);
+  --font-Century: var(--font-century);
 }
 
 .bodyMain {
@@ -134,4 +136,53 @@
 
 .slick-slide > div {
   margin: 19px;
+}
+
+.sidenav {
+  display: flex;
+
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  width: 0px;
+  height: 100vh;
+  top: 72px;
+  right: 0px;
+  background: #c74848;
+  background: radial-gradient(
+    circle,
+    rgba(199, 72, 72, 1) 0%,
+    rgba(189, 45, 45, 1) 66%,
+    rgba(122, 16, 16, 1) 100%
+  );
+  /* background-color: white; */
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenavClose {
+  display: flex;
+
+  justify-content: end;
+  align-items: start;
+  position: fixed;
+  width: 40%;
+  height: 100vh;
+  top: 72px;
+  right: 0px;
+  background: #c74848;
+  background: radial-gradient(
+    circle,
+    rgba(199, 72, 72, 1) 0%,
+    rgba(189, 45, 45, 1) 66%,
+    rgba(122, 16, 16, 1) 100%
+  );
+  /* background-color: white; */
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+.sideMenuTran {
+  display: block;
+  transition: 0.3s;
 }

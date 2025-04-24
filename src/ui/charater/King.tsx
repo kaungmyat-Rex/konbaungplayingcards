@@ -2,7 +2,7 @@
 import React from "react";
 import king from "../../../public/charatorImg/king.svg";
 import Image from "next/image";
-
+import queenphoto from "../../../public/Queenphoto1.svg";
 interface KingProps {
   refKing: React.RefObject<HTMLDivElement | null>;
 }
@@ -14,24 +14,6 @@ const King = ({ refKing }: KingProps) => {
       ref={refKing}
       className="w-full h-full md:flex justify-center items-start py-20 relative"
     >
-      {/* <div
-            className="block md:hidden"
-            style={{
-              backgroundImage: `url('/charatorImg/${character}.svg')`,
-              height: "100vh",
-              backgroundAttachment: "fixed",
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div> */}
-      {/* <Image
-            src={king}
-            alt="king"
-            className="w-full h-screen object-contain sticky top-0 -z-[1]"
-            width={800}
-            height={800}
-          /> */}
       <div className="sticky top-20 flex-[5] -z-[1]">
         <div className="flex justify-center items-center relative">
           <Image
@@ -41,92 +23,56 @@ const King = ({ refKing }: KingProps) => {
             height={800}
             className="max-w-[400px] w-full h-full object-contain"
           />
-          <h4 className="text-white font-bold text-5xl my-10 text-center absolute bottom-0 left-10 font-SourceSerif">
+          <h4 className="text-white font-bold text-5xl my-10 text-center absolute bottom-0 left-10 font-SourceSerif hidden md:block">
             King
           </h4>
         </div>
       </div>
 
-      <div className="flex-[7] ">
-        <p
-          className="text-black text-justify bg-white md:bg-transparent md:text-white p-5 rounded-lg text-base font-medium font-Nunito
+      <div className="flex-[7] relative p-5 rounded-lg">
+        <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[120px] left-0 font-SourceSerif md:hidden">
+          King
+        </h4>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-x-5 gap-y-5 bg-white p-3 rounded-lg">
+          <Image className="w-[200px]" src={queenphoto} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito
         "
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
-          scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices
-          nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
-          aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
-          odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-          congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-          In at libero sed nunc venenatis imperdiet sed ornare turpis.
-          <br />
-          <br />
-          Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-          congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
-          Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-          interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-          venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-          vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-          ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-          urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-          nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-          venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-          gravida venenatis. Integer fringilla
-          <br />
-          congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
-          Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-          consectetur lit. Phasellus imperdiet, nulla et dictum interdum, nisi
-          lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-          Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-          luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-          ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum
-          ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
-          ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
-          ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-          fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
-          porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor
-          sit amet, consectetur lit. Phasellus imperdiet, nulla et dictum
-          interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-          venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-          vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-          ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-          urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-          nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-          venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-          gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-          dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis
-          diam velit. Lorem ipsum dolor sit amet, <br /> consectetur vitae
-          scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices
-          nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
-          aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
-          odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-          congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-          In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec
-          vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
-          non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
-          purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-          vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-          ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-          augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
-          lobortis in odio. Praesent convallis urna a lacus interdum ut
-          hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
-          ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
-          ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-          fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
-          porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor
-          sit amet, consecteturvitae scelerisque enim ligula venenatis dolor.
-          Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-          luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-          ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum
-          ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
-          ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
-          ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-          fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
-          porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor
-          sit amet, consectetur
-        </p>
+          >
+            Queen Supayalat (1859–1925) was the last queen of Myanmar, married
+            to King Thibaw. She was known for her intelligence, political
+            influence, and strong personality.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row-reverse justify-start items-center gap-x-5 gap-y-5 bg-white p-3 rounded-lg mt-3">
+          <Image className="w-[200px]" src={queenphoto} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito
+        "
+          >
+            King Thibaw and Queen Supayalat
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-x-5 gap-y-5">
+          <Image className="w-[200px]" src={queenphoto} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito
+        "
+          >
+            Thazin flower (Bulbophyllum auricomum) is Myanmar’s royal flower,
+            symbolizing grace, purity, and royalty. Traditionally worn by queens
+            and princesses.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row-reverse justify-center items-center gap-x-5  gap-y-5 py-7">
+          <Image className="w-[200px]" src={queenphoto} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito
+        "
+          >
+            Queen's Headwear and Necklace presented by a model
+          </p>
+        </div>
       </div>
     </div>
   );

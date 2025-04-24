@@ -7,24 +7,28 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
-
 import CharatorList from "@/ui/CharatorList";
 import React from "react";
+import Shop from "@/ui/Shop";
+
 export default function Home() {
   const mainref = React.useRef<HTMLDivElement>(null);
 
+  // snap-y snap-mandatory --main tag
+  // snap-end -- home and contact page tag
   return (
-    <main
-      ref={mainref}
-      className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth"
-    >
+    <main ref={mainref} className="h-screen overflow-y-scroll scroll-smooth">
       <section
         id="home"
-        className="w-full h-screen flex justify-center items-center px-0 md:px-20 pt-10 overflow-x-hidden snap-end"
+        className="w-full h-screen flex justify-center items-center px-0 md:px-20 pt-10 overflow-x-hidden"
       >
         <MainCardSwiper />
       </section>
-      <section id="contact" className="w-full h-screen snap-end">
+      <Shop />
+
+      <CharatorList mainref={mainref} />
+
+      <section id="contact" className="w-full h-full">
         <div className="relative w-full h-[500px]">
           <Image
             src={mandalayImg}
@@ -86,12 +90,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <CharatorList mainref={mainref} />
-      <section className="w-full h-full snap-end">
-        {/* <div className="w-full h-full flex justify-center items-center bg-red-500">
-          this is test div one
-        </div> */}
       </section>
     </main>
   );

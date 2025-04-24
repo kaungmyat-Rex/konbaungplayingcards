@@ -1,7 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import queen from "../../../public/charatorImg/Queen.svg";
-
+import queenphotoone from "../../../public/Queenphoto1.svg";
+import queenphototwo from "../../../public/Queenphoto2.svg";
+import queenphotothree from "../../../public/Queenphoto3.svg";
+import queenphotofour from "../../../public/Queenphoto4.svg";
 interface QueenProps {
   refQueen: React.RefObject<HTMLDivElement | null>;
 }
@@ -20,93 +23,58 @@ const Queen = ({ refQueen }: QueenProps) => {
             alt="queen"
             width={800}
             height={800}
-            className="max-w-[470px] w-full h-full object-contain"
+            className="md:max-w-[500px] md:w-full h-full object-contain"
           />
-          <h4 className="text-white font-bold text-5xl my-10 text-center absolute bottom-0 left-10 font-SourceSerif">
+          <h4 className="text-white font-bold text-5xl my-10 text-center absolute bottom-0 left-10 font-SourceSerif hidden md:block">
             Queen
           </h4>
         </div>
       </div>
-      <div className="flex-[7]">
-        <p
-          className="text-black text-justify bg-white md:bg-transparent md:text-white p-5 rounded-lg text-base font-medium font-Nunito
+      <div className="flex-[7] relative p-5 rounded-lg bg-white">
+        <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[120px] left-0 font-SourceSerif md:hidden">
+          Queen
+        </h4>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-x-5 gap-y-5">
+          <Image className="w-[200px]" src={queenphotoone} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito
         "
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
-          scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices
-          nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
-          aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
-          odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-          congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-          In at libero sed nunc venenatis imperdiet sed ornare turpis.
-          <br />
-          <br />
-          Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-          congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
-          Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-          interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-          venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-          vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-          ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-          urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-          nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-          venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-          gravida venenatis. Integer fringilla
-          <br />
-          congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.
-          Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-          consectetur lit. Phasellus imperdiet, nulla et dictum interdum, nisi
-          lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-          Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-          luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-          ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum
-          ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
-          ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
-          ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-          fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
-          porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor
-          sit amet, consectetur lit. Phasellus imperdiet, nulla et dictum
-          interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-          venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-          vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-          ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-          urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-          nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-          venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-          gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-          dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis
-          diam velit. Lorem ipsum dolor sit amet, <br /> consectetur vitae
-          scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices
-          nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
-          aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in
-          odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-          congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-          In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec
-          vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
-          non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
-          purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-          vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-          ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-          augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
-          lobortis in odio. Praesent convallis urna a lacus interdum ut
-          hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
-          ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
-          ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-          fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
-          porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor
-          sit amet, consecteturvitae scelerisque enim ligula venenatis dolor.
-          Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-          luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-          ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum
-          ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper
-          ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
-          ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer
-          fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
-          porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor
-          sit amet, consectetur
-        </p>
+          >
+            Queen Supayalat (1859–1925) was the last queen of Myanmar, married
+            to King Thibaw. She was known for her intelligence, political
+            influence, and strong personality.
+          </p>
+        </div>
+
+        <div className="flex flex-col md:flex-row-reverse justify-start items-center gap-x-5 gap-y-5 py-7">
+          <Image className="w-[200px]" src={queenphototwo} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito 
+        "
+          >
+            King Thibaw and Queen Supayalat
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-x-5 gap-y-5">
+          <Image className="w-[200px]" src={queenphotothree} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito
+        "
+          >
+            Thazin flower (Bulbophyllum auricomum) is Myanmar’s royal flower,
+            symbolizing grace, purity, and royalty. Traditionally worn by queens
+            and princesses.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row-reverse justify-start items-center gap-x-5  gap-y-5 py-7">
+          <Image className="w-[200px]" src={queenphotofour} alt="qqp" />
+          <p
+            className="text-black text-justify text-base font-medium font-Nunito
+        "
+          >
+            Queen's Headwear and Necklace presented by a model
+          </p>
+        </div>
       </div>
     </div>
   );

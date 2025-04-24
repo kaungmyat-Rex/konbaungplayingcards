@@ -22,12 +22,15 @@ const Jack = ({ refJack }: jackProps) => {
             height={800}
             className={`max-w-[380px] w-full h-full object-contain `}
           />
-          <h4 className="text-white font-bold text-5xl my-10 text-center absolute bottom-0 left-10 font-SourceSerif">
+          <h4 className="text-white font-bold text-5xl my-10 text-center absolute bottom-0 left-10 font-SourceSerif hidden md:block">
             Jack
           </h4>
         </div>
       </div>
-      <div className="flex-[7]">
+      <div className="flex-[7] relative">
+        <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[120px] left-0 font-SourceSerif md:hidden">
+          Jack
+        </h4>
         <p
           className="text-black text-justify bg-white md:bg-transparent md:text-white p-5 rounded-lg text-base font-medium font-Nunito
         "
