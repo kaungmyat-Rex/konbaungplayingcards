@@ -7,11 +7,9 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
-import CharatorList from "@/ui/CharatorList";
-import React, { act, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Shop from "@/ui/Shop";
 import { useActiveSection } from "@/context/activeSection";
-
 import King from "@/ui/charater/King";
 import Queen from "@/ui/charater/Queen";
 import Jack from "@/ui/charater/Jack";
@@ -26,7 +24,6 @@ import Four from "@/ui/charater/Four";
 import Three from "@/ui/charater/Three";
 import Two from "@/ui/charater/Two";
 import { CARDS } from "@/constants/cardmenu";
-
 import leftKanot from "../../public/left corner kanote.svg";
 import rightKanot from "../../public/right corner kanote.svg";
 
@@ -35,7 +32,6 @@ export default function Home() {
   const mainref = React.useRef<HTMLDivElement>(null);
   const homeref = React.useRef<HTMLDivElement>(null);
   const shopref = React.useRef<HTMLDivElement>(null);
-  const exploreref = React.useRef<HTMLDivElement>(null);
   const contactref = React.useRef<HTMLDivElement>(null);
 
   // charator ref group
@@ -112,10 +108,7 @@ export default function Home() {
       const twoDiv = (refTwo.current?.offsetTop ?? 0) - 300;
       const aceDiv = (refAce.current?.offsetTop ?? 0) - 300;
 
-      // const testdiv = refKing.current?.offsetParent ?? 0;
-      // console.log("🚀 ~ handleScroll ~ testdiv:", kingDiv);
       const scrollPosition = Math.floor(mainref?.current?.scrollTop ?? 0);
-      // console.log("🚀 ~ handleScroll ~ kingDiv:", kingDiv);
 
       if (scrollPosition >= kingDiv && scrollPosition < queenDiv) {
         setActiveFirstSlide(0);
@@ -174,7 +167,6 @@ export default function Home() {
         setActiveSecondSlide(13);
         setActiveId(12);
       }
-      console.log("🚀 ~ handleScroll ~ scrollPosition:", scrollPosition);
     };
     if (!scrollEl) return;
 
@@ -299,7 +291,7 @@ export default function Home() {
           </div>
         </div>
       )}
-      {/* <CharatorList mainref={mainref} exploreref={exploreref} /> */}
+
       <section ref={contactref} id="contact" className="w-full h-full">
         <div className="relative w-full h-[500px]">
           <Image
@@ -363,11 +355,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="flex justify-center items-center py-2 relative">
+      <section className="flex flex-col md:flex-row justify-center items-center py-2 relative">
         <p className="text-white/75 font-Nunito font-normal text-sm md:text-sm">
           ©2025 konbaungplayingcards. All rights reserved.
         </p>
-        <span className="text-white/75 font-Nunito font-normal text-sm md:text-sm absolute right-2 bottom-2">
+        <span className="text-white/75 font-Nunito font-normal text-sm md:text-sm absolute md:right-2 md:bottom-2 bottom-8 right-0 md:left-0 md:-translate-x-0 left-[50%] -translate-x-[50%]">
           Developed by{" "}
           <Link target="_blank" href={"https://kgmyat.vercel.app/"}>
             kgmyat

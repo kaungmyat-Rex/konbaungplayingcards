@@ -7,18 +7,23 @@ import Hamburger from "../common/Hamburger";
 import Link from "next/link";
 import SideNav from "./SideNav";
 import { useActiveSection } from "@/context/activeSection";
-// import { usePathnam , } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [toggle, setToggle] = useState<boolean>(false);
   const { activeSection } = useActiveSection();
-
+  const router = useRouter();
   return (
     <header>
       <div
         className={`w-full overflow-hidden fixed top-0 lg:-left-[8px] flex items-center justify-between px-6 md:px-20 py-2 z-30 bg-[#c7484850] backdrop-blur-lg `}
       >
-        <div className="flex items-center justify-center gap-x-3">
+        <div
+          className="flex items-center justify-center gap-x-3"
+          onClick={() => {
+            router.push("#home");
+          }}
+        >
           <Image
             src={logoImg}
             alt="logo"

@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -61,7 +61,6 @@ const MainCardSwiper = () => {
           slideShadows: true,
         }}
         pagination={false}
-        // slidesPerView={2}
         modules={[EffectCoverflow, Keyboard]}
         className="w-full h-full"
       >
@@ -71,7 +70,6 @@ const MainCardSwiper = () => {
               className="rounded-lg cursor-pointer"
               key={card.id}
               onClick={() => {
-                console.log(card.id);
                 router.push(card.path);
               }}
             >
