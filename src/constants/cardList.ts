@@ -16,20 +16,20 @@ import diamond2 from "../../public/cardImg/6 diamond.svg";
 import diamond3 from "../../public/cardImg/7 diamond.svg";
 
 export const CARDLIST: CardType[] = [
-  { id: 1, cardPower: "spade", ImgPath: spade1, type: 13 },
-  { id: 2, cardPower: "spade", ImgPath: spade2, type: 12 },
-  { id: 3, cardPower: "spade", ImgPath: spade3, type: 11 },
+  { id: 1, cardPower: "spade", ImgPath: spade1, type: 13, path: "#king" },
+  { id: 2, cardPower: "spade", ImgPath: spade2, type: 12, path: "#queen" },
+  { id: 3, cardPower: "spade", ImgPath: spade3, type: 11, path: "#jack" },
 
-  { id: 4, cardPower: "heart", ImgPath: heart3, type: 10 },
-  { id: 5, cardPower: "heart", ImgPath: heart2, type: 9 },
-  { id: 6, cardPower: "heart", ImgPath: heart1, type: 8 },
+  { id: 4, cardPower: "heart", ImgPath: heart3, type: 10, path: "#ten" },
+  { id: 5, cardPower: "heart", ImgPath: heart2, type: 9, path: "#nine" },
+  { id: 6, cardPower: "heart", ImgPath: heart1, type: 8, path: "#eight" },
 
-  { id: 7, cardPower: "diamond", ImgPath: diamond3, type: 7 },
-  { id: 8, cardPower: "diamond", ImgPath: diamond2, type: 6 },
-  { id: 9, cardPower: "diamond", ImgPath: diamond1, type: 5 },
+  { id: 7, cardPower: "diamond", ImgPath: diamond3, type: 7, path: "#seven" },
+  { id: 8, cardPower: "diamond", ImgPath: diamond2, type: 6, path: "#six" },
+  { id: 9, cardPower: "diamond", ImgPath: diamond1, type: 5, path: "#five" },
 
-  { id: 10, cardPower: "club", ImgPath: club3, type: 4 },
-  { id: 11, cardPower: "club", ImgPath: club2, type: 3 },
-  { id: 12, cardPower: "club", ImgPath: club1, type: 2 },
-  { id: 13, cardPower: "club", ImgPath: club4, type: 1 },
+  { id: 10, cardPower: "club", ImgPath: club3, type: 4, path: "#four" },
+  { id: 11, cardPower: "club", ImgPath: club2, type: 3, path: "#three" },
+  { id: 12, cardPower: "club", ImgPath: club1, type: 2, path: "#two" },
+  { id: 13, cardPower: "club", ImgPath: club4, type: 1, path: "#ace" },
 ];

@@ -4,6 +4,7 @@ import "./globals.css";
 import "./swiper.css";
 import Header from "@/ui/layout/Header";
 import localFont from "next/font/local";
+import { ActiveSectionProvider } from "@/context/activeSection";
 
 const burma = localFont({
   src: "../../public/fonts/BurmaRegular.ttf",
@@ -53,9 +54,12 @@ export default function RootLayout({
       <body
         className={`${NunitoPrimary.variable} ${MontserratHeader.variable} ${burma.variable} ${burmaBold.variable} ${SourceSerif.variable} ${elephant.variable} antialiased relative`}
       >
-        <div className="bodyMain"></div>
-        <Header />
-        {children}
+        <ActiveSectionProvider>
+          <div className="bodyMain"></div>
+          <Header />
+
+          {children}
+        </ActiveSectionProvider>
       </body>
     </html>
   );

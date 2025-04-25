@@ -32,14 +32,17 @@ const Eight = ({ refEight }: EightProps) => {
         </div>
       </div>
 
-      <div className="flex-[7] relative bg-white p-5 rounded-lg">
+      <div className="flex-[5] relative p-5 rounded-lg border-2 border-white backdrop-blur-lg ">
         <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[140px] left-0 font-SourceSerif md:hidden">
           8 . Queen's Chamberlain
+        </h4>
+        <h4 className="text-white font-bold text-2xl text-center mb-5">
+          Do you know?
         </h4>
         <div className="flex flex-col md:flex-row justify-start items-center gap-x-5 gap-y-5">
           <Image className="w-[200px]" src={exploreone} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             Costume awarded to Queen’s chamberlain by the king
@@ -48,7 +51,7 @@ const Eight = ({ refEight }: EightProps) => {
         <div className="flex flex-col md:flex-row-reverse  justify-start items-center gap-x-5 gap-y-5 py-7">
           <Image className="w-[200px]" src={exploretwo} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             In the Burmese royal court, fans were not just for cooling down,
@@ -58,7 +61,7 @@ const Eight = ({ refEight }: EightProps) => {
         <div className="flex flex-col md:flex-row justify-start items-center gap-x-5 gap-y-5">
           <Image className="w-[200px]" src={explorethree} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             A Royal Officer holding a Large ceremonial fan.
@@ -67,7 +70,7 @@ const Eight = ({ refEight }: EightProps) => {
         <div className="flex flex-col md:flex-row-reverse justify-start items-center gap-x-5  gap-y-5 py-7">
           <Image className="w-[200px]" src={explorefour} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             Burmese royal fans were made from luxurious materials such as

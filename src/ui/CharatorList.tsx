@@ -15,10 +15,14 @@ import Eight from "./charater/Eight";
 import Seven from "./charater/Seven";
 import Six from "./charater/Six";
 import Five from "./charater/Five";
+import Four from "./charater/Four";
+import Three from "./charater/Three";
+import Two from "./charater/Two";
 interface mainrefProps {
   mainref: React.RefObject<HTMLDivElement | null>;
+  exploreref: React.RefObject<HTMLDivElement | null>;
 }
-const CharatorList = ({ mainref }: mainrefProps) => {
+const CharatorList = ({ mainref, exploreref }: mainrefProps) => {
   const sliderRef = useRef<Slider | null>(null);
   const refKing = useRef<HTMLDivElement>(null);
   const refQueen = useRef<HTMLDivElement>(null);
@@ -26,10 +30,13 @@ const CharatorList = ({ mainref }: mainrefProps) => {
   const refTen = useRef<HTMLDivElement>(null);
   const refNine = useRef<HTMLDivElement>(null);
   const refEight = useRef<HTMLDivElement>(null);
-  const refAce = useRef<HTMLDivElement>(null);
   const refSeven = useRef<HTMLDivElement>(null);
   const refSix = useRef<HTMLDivElement>(null);
   const refFive = useRef<HTMLDivElement>(null);
+  const refFour = useRef<HTMLDivElement>(null);
+  const refThree = useRef<HTMLDivElement>(null);
+  const refTwo = useRef<HTMLDivElement>(null);
+  const refAce = useRef<HTMLDivElement>(null);
   const [active, setActive] = React.useState<string>("");
   const [open, setOpen] = React.useState<boolean>(false);
   const router = useRouter();
@@ -46,61 +53,61 @@ const CharatorList = ({ mainref }: mainrefProps) => {
     sliderRef?.current?.slickGoTo(index);
   };
 
-  useEffect(() => {
-    const scrollEl = mainref?.current;
-    const handleScroll = () => {
-      const kingDiv = (refKing.current?.offsetTop ?? 0) + 1280;
-      const queenDiv = (refQueen.current?.offsetTop ?? 0) + 1000;
-      const JackDiv = (refJack.current?.offsetTop ?? 0) + 1000;
-      const TenDiv = (refTen.current?.offsetTop ?? 0) + 1000;
-      const nineDiv = (refNine.current?.offsetTop ?? 0) + 500;
-      const scrollPosition = Math.floor(mainref?.current?.scrollTop ?? 0);
+  // useEffect(() => {
+  //   const scrollEl = mainref?.current;
+  //   const handleScroll = () => {
+  //     const kingDiv = (refKing.current?.offsetTop ?? 0) + 1280;
+  //     const queenDiv = (refQueen.current?.offsetTop ?? 0) + 1000;
+  //     const JackDiv = (refJack.current?.offsetTop ?? 0) + 1000;
+  //     const TenDiv = (refTen.current?.offsetTop ?? 0) + 1000;
+  //     const nineDiv = (refNine.current?.offsetTop ?? 0) + 500;
+  //     const scrollPosition = Math.floor(mainref?.current?.scrollTop ?? 0);
 
-      if (scrollPosition >= kingDiv) {
-        setOpen(true);
-      } else {
-        setOpen(false);
-      }
+  //     if (scrollPosition >= kingDiv) {
+  //       setOpen(true);
+  //     } else {
+  //       setOpen(false);
+  //     }
 
-      if (scrollPosition >= kingDiv && scrollPosition < queenDiv) {
-        console.log("it trigger 1");
-        // sliderRef?.current?.slickGoTo(0);
-      } else if (scrollPosition >= queenDiv && scrollPosition < JackDiv) {
-        console.log("it trigger 2");
-        // sliderRef?.current?.slickGoTo(1);
-      } else if (scrollPosition >= JackDiv && scrollPosition < TenDiv) {
-        console.log("it trigger 3");
-        // sliderRef?.current?.slickGoTo(2);
-      } else if (scrollPosition >= TenDiv && scrollPosition < nineDiv) {
-        console.log("it trigger 4");
-        // sliderRef?.current?.slickGoTo(2);
-      }
-      // if (scrollPosition >= JackDiv && scrollPosition < queenDiv) {
-      //   console.log("trigger 3");
-      //   sliderRef?.current?.slickGoTo(2);
-      // } else if (scrollPosition >= queenDiv && scrollPosition < kingDiv) {
-      //   console.log("trigger 2");
-      //   sliderRef?.current?.slickGoTo(1);
-      // } else if (scrollPosition >= kingDiv) {
-      //   console.log("trigger 1");
-      //   sliderRef?.current?.slickGoTo(0);
-      // }
-      console.log("🚀 ~ handleScroll ~ scrollPosition:", scrollPosition);
-      console.log("🚀 ~ handleScroll ~ kingDiv:", kingDiv);
-      console.log("🚀 ~ handleScroll ~ queenDiv:", queenDiv);
-      console.log("🚀 ~ handleScroll ~ JackDiv:", JackDiv);
-    };
-    if (!scrollEl) return;
+  //     if (scrollPosition >= kingDiv && scrollPosition < queenDiv) {
+  //       console.log("it trigger 1");
+  //       // sliderRef?.current?.slickGoTo(0);
+  //     } else if (scrollPosition >= queenDiv && scrollPosition < JackDiv) {
+  //       console.log("it trigger 2");
+  //       // sliderRef?.current?.slickGoTo(1);
+  //     } else if (scrollPosition >= JackDiv && scrollPosition < TenDiv) {
+  //       console.log("it trigger 3");
+  //       // sliderRef?.current?.slickGoTo(2);
+  //     } else if (scrollPosition >= TenDiv && scrollPosition < nineDiv) {
+  //       console.log("it trigger 4");
+  //       // sliderRef?.current?.slickGoTo(2);
+  //     }
+  //     // if (scrollPosition >= JackDiv && scrollPosition < queenDiv) {
+  //     //   console.log("trigger 3");
+  //     //   sliderRef?.current?.slickGoTo(2);
+  //     // } else if (scrollPosition >= queenDiv && scrollPosition < kingDiv) {
+  //     //   console.log("trigger 2");
+  //     //   sliderRef?.current?.slickGoTo(1);
+  //     // } else if (scrollPosition >= kingDiv) {
+  //     //   console.log("trigger 1");
+  //     //   sliderRef?.current?.slickGoTo(0);
+  //     // }
+  //     // console.log("🚀 ~ handleScroll ~ scrollPosition:", scrollPosition);
+  //     // console.log("🚀 ~ handleScroll ~ kingDiv:", kingDiv);
+  //     // console.log("🚀 ~ handleScroll ~ queenDiv:", queenDiv);
+  //     // console.log("🚀 ~ handleScroll ~ JackDiv:", JackDiv);
+  //   };
+  //   if (!scrollEl) return;
 
-    scrollEl.addEventListener("scroll", handleScroll);
+  //   scrollEl.addEventListener("scroll", handleScroll);
 
-    return () => {
-      scrollEl.removeEventListener("scroll", handleScroll);
-    };
-  }, [mainref]);
+  //   return () => {
+  //     scrollEl.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [mainref]);
 
   return (
-    <section className="w-full h-auto px-5 md:px-20 relative">
+    <section ref={exploreref} className="w-full h-auto px-5 md:px-20 relative">
       <King refKing={refKing} />
       <Queen refQueen={refQueen} />
       <Jack refJack={refJack} />
@@ -110,6 +117,9 @@ const CharatorList = ({ mainref }: mainrefProps) => {
       <Seven refSeven={refSeven} />
       <Six refSix={refSix} />
       <Five refFive={refFive} />
+      <Four refFour={refFour} />
+      <Three refThree={refThree} />
+      <Two refTwo={refTwo} />
       <Ace refAce={refAce} />
       {/* {open && (
         <div className="slider-container fixed w-[400px] bottom-20 left-[50%] -translate-x-[50%] z-30">

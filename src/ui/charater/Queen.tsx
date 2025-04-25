@@ -23,21 +23,24 @@ const Queen = ({ refQueen }: QueenProps) => {
             alt="queen"
             width={800}
             height={800}
-            className="md:max-w-[500px] md:w-full h-full object-contain"
+            className="max-w-[300px] md:max-w-[300px] md:w-full h-full object-contain"
           />
           <h4 className="text-white font-bold text-5xl my-10 text-center absolute bottom-0 left-10 font-SourceSerif hidden md:block">
             Queen
           </h4>
         </div>
       </div>
-      <div className="flex-[7] relative p-5 rounded-lg bg-white">
+      <div className="flex-[5] relative p-5 rounded-lg border-2 border-white backdrop-blur-lg ">
         <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[120px] left-0 font-SourceSerif md:hidden">
           Queen
+        </h4>
+        <h4 className="text-white font-bold text-2xl text-center mb-5">
+          Do you know?
         </h4>
         <div className="flex flex-col md:flex-row justify-center items-center gap-x-5 gap-y-5">
           <Image className="w-[200px]" src={queenphotoone} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
         "
           >
             Queen Supayalat (1859–1925) was the last queen of Myanmar, married
@@ -49,7 +52,7 @@ const Queen = ({ refQueen }: QueenProps) => {
         <div className="flex flex-col md:flex-row-reverse justify-start items-center gap-x-5 gap-y-5 py-7">
           <Image className="w-[200px]" src={queenphototwo} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito 
+            className="text-white text-justify text-base font-medium font-Nunito 
         "
           >
             King Thibaw and Queen Supayalat
@@ -58,7 +61,7 @@ const Queen = ({ refQueen }: QueenProps) => {
         <div className="flex flex-col md:flex-row justify-center items-center gap-x-5 gap-y-5">
           <Image className="w-[200px]" src={queenphotothree} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
         "
           >
             Thazin flower (Bulbophyllum auricomum) is Myanmar’s royal flower,
@@ -69,7 +72,7 @@ const Queen = ({ refQueen }: QueenProps) => {
         <div className="flex flex-col md:flex-row-reverse justify-start items-center gap-x-5  gap-y-5 py-7">
           <Image className="w-[200px]" src={queenphotofour} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
         "
           >
             Queen's Headwear and Necklace presented by a model

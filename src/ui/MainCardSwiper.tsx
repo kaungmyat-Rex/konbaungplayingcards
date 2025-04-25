@@ -15,10 +15,12 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+import { useRouter } from "next/navigation";
+
 const MainCardSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef<any>(null);
-
+  const router = useRouter();
   const goToSlide = (index: number) => {
     if (swiperRef.current) {
       swiperRef.current.slideTo(index, 800);
@@ -70,6 +72,7 @@ const MainCardSwiper = () => {
               key={card.id}
               onClick={() => {
                 console.log(card.id);
+                router.push(card.path);
               }}
             >
               <Image

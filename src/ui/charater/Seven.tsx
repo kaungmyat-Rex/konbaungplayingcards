@@ -32,9 +32,12 @@ const Seven = ({ refSeven }: SevenProps) => {
         </div>
       </div>
 
-      <div className="flex-[7] relative bg-white p-5 rounded-lg">
+      <div className="flex-[5] relative p-5 rounded-lg border-2 border-white backdrop-blur-lg ">
         <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[140px] left-0 font-SourceSerif md:hidden">
           7 . Chief Justice
+        </h4>
+        <h4 className="text-white font-bold text-2xl text-center mb-5">
+          Do you know?
         </h4>
         <div className="flex flex-col md:flex-row justify-start items-center gap-x-5 gap-y-5">
           <Image
@@ -43,7 +46,7 @@ const Seven = ({ refSeven }: SevenProps) => {
             alt="qqp"
           />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             Costume for Chief Justice awarded by the king
@@ -56,7 +59,7 @@ const Seven = ({ refSeven }: SevenProps) => {
             alt="qqp"
           />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             Saya Chone's painting, "Royal Audience"
@@ -65,7 +68,7 @@ const Seven = ({ refSeven }: SevenProps) => {
         <div className="flex flex-col md:flex-row justify-start items-center gap-x-5 gap-y-5">
           <Image className="w-[200px]" src={explorethree} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             Burmese sword "Dha"

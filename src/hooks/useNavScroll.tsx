@@ -7,8 +7,6 @@ const useNavScroll = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log("useEffect mounted");
-
       const currentPosition = Math.floor(window.pageYOffset);
 
       if (currentPosition > prevScrollRef.current) {

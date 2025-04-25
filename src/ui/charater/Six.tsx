@@ -32,14 +32,17 @@ const Six = ({ refSix }: SixProps) => {
         </div>
       </div>
 
-      <div className="flex-[7] relative bg-white p-5 rounded-lg">
+      <div className="flex-[5] relative p-5 rounded-lg border-2 border-white backdrop-blur-lg ">
         <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[140px] left-0 font-SourceSerif md:hidden">
           6 . Ministers of Agriculture
+        </h4>
+        <h4 className="text-white font-bold text-2xl text-center mb-5">
+          Do you know?
         </h4>
         <div className="flex flex-col md:flex-row justify-start items-center gap-x-5 gap-y-5">
           <Image className="w-[150px]" src={exploreone} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             Costume for Ministers of Industry and Agriculture awarded by the
@@ -49,7 +52,7 @@ const Six = ({ refSix }: SixProps) => {
         <div className="flex flex-col md:flex-row-reverse  justify-start items-center gap-x-5 gap-y-5 py-7">
           <Image className="w-[200px]" src={exploretwo} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             The Royal Ploughing Ceremony
@@ -58,7 +61,7 @@ const Six = ({ refSix }: SixProps) => {
         <div className="flex flex-col md:flex-row justify-start items-center gap-x-5 gap-y-5">
           <Image className="w-[200px]" src={explorethree} alt="qqp" />
           <p
-            className="text-black text-justify text-base font-medium font-Nunito
+            className="text-white text-justify text-base font-medium font-Nunito
             "
           >
             Sickle harvest crops by cutting stalks.

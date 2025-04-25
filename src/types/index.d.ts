@@ -9,6 +9,7 @@ export interface CardType {
   cardPower: string;
   ImgPath: string;
   type: number;
+  path: string;
 }
 
 interface Card {

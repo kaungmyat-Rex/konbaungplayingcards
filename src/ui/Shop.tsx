@@ -10,9 +10,10 @@ import { FaTruckFast } from "react-icons/fa6";
 import { GiPokerHand } from "react-icons/gi";
 import Image from "next/image";
 import { IoMdCheckmark } from "react-icons/io";
+import Link from "next/link";
 const Shop = () => {
   return (
-    <section id="shop" className="w-full h-auto ">
+    <div className="w-full h-auto ">
       <div className="relative w-full h-[500px]">
         <Image
           src={mandalaydarkImg}
@@ -104,7 +105,7 @@ const Shop = () => {
               className="max-w-[350px] w-[300px] md:w-full object-contain md:absolute relative md:right-[70px] top-0"
               alt="mk3"
             />
-            <p className="text-white font-Nunito text-[20px] font-semibold text-center absolute md:-left-5 md:bottom-[90px] left-[50%] -translate-x-[50%] -bottom-[20px] whitespace-nowrap">
+            <p className="text-white font-Nunito text-[20px] font-semibold text-center absolute md:left-20 md:bottom-[90px] left-[50%] -translate-x-[50%] -bottom-[20px] whitespace-nowrap">
               1 Translation Guide Card
             </p>
           </div>
@@ -116,7 +117,7 @@ const Shop = () => {
                 Kongbaung Royal Rank Playing Cards
               </h4>
               <p className="font-Montserrat text-[17px] font-medium text-white">
-                ฿600 THB
+                ฿700 THB
               </p>
             </div>
             <p className="font-Nunito text-[15px] font-normal text-white mt-3 text-justify">
@@ -177,11 +178,17 @@ const Shop = () => {
                   1 item included (+ optional add-ons)
                 </p>
               </span>
+              <Link
+                href={"#contact"}
+                className="font-Nunito text-[16px] font-normal text-white border border-white w-full text-center rounded-md p-3 mt-3 hover:bg-white/25 transition-all duration-300 ease-in-out cursor-pointer"
+              >
+                Buy Now
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
