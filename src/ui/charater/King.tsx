@@ -9,7 +9,7 @@ import kingphotofour from "../../../public/Kexplore4.svg";
 import kingphotofive from "../../../public/Kexplore5.svg";
 
 interface KingProps {
-  refKing: React.RefObject<HTMLDivElement | null>;
+  refKing?: React.RefObject<HTMLDivElement | null>;
 }
 
 const King = ({ refKing }: KingProps) => {

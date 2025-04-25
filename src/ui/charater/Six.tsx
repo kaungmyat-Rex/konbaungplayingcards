@@ -7,7 +7,7 @@ import exploretwo from "../../../public/6explore2.svg";
 import explorethree from "../../../public/6explore3.svg";
 
 interface SixProps {
-  refSix: React.RefObject<HTMLDivElement | null>;
+  refSix?: React.RefObject<HTMLDivElement | null>;
 }
 
 const Six = ({ refSix }: SixProps) => {
@@ -27,14 +27,14 @@ const Six = ({ refSix }: SixProps) => {
             className="max-w-[400px] w-full h-full object-contain"
           />
           <h4 className="text-white font-bold text-5xl my-10 text-left absolute -bottom-15 left-10 font-SourceSerif hidden md:block">
-            6 . Ministers of Agriculture
+            6 . Minister of Agriculture
           </h4>
         </div>
       </div>
 
       <div className="flex-[5] relative p-5 rounded-lg border-2 border-white backdrop-blur-lg ">
         <h4 className="text-white font-bold text-5xl my-10 text-center absolute -top-[140px] left-0 font-SourceSerif md:hidden">
-          6 . Ministers of Agriculture
+          6 . Minister of Agriculture
         </h4>
         <h4 className="text-white font-bold text-2xl text-center mb-5">
           Do you know?

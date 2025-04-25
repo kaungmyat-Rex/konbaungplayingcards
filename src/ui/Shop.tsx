@@ -51,7 +51,7 @@ const Shop = () => {
               </p>
             </div>
           </div>
-          <div className="max-w-[600px] w-full relative p-12 md:mt-5 mt-20 ">
+          <div className="max-w-[600px] w-full relative p-12 md:mt-5 mt-20 flex justify-center items-center ">
             <Image
               src={leftKanot}
               alt="Lkanot"
@@ -62,7 +62,7 @@ const Shop = () => {
               alt="Rkanot"
               className="absolute w-[100px] right-[20px] md:bottom-10 bottom-0"
             />
-            <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center">
+            <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center w-[70%] mb-6">
               Konbaung Playing Cards _ inspired by traditional card decks,
               redesigned with the ranks of Burmese Royal Court
             </p>
@@ -72,7 +72,7 @@ const Shop = () => {
             className="max-w-[600px] w-full object-contain mt-16"
             alt="mk2"
           />
-          <div className="max-w-[600px] w-full relative p-12 mt-5  ">
+          <div className="max-w-[600px] w-full relative p-12 mt-5 flex justify-center items-center ">
             <Image
               src={leftKanot}
               alt="Lkanot"
@@ -83,9 +83,10 @@ const Shop = () => {
               alt="Rkanot"
               className="absolute w-[100px] right-[20px] md:bottom-10 bottom-0"
             />
-            <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center">
+            <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center w-[91%] mt-3 md:mb-6">
               Includes 1 instruction & Translation Guide Card and 54 Playing
-              cards
+              cards from Ace to King, every card is written in Burmese script —
+              perfect for collectors, culture lovers, and card game fans alike.
             </p>
           </div>
           <div className="relative max-w-[600px] w-full h-[500px] px-[20px]">

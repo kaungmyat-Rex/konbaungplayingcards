@@ -7,7 +7,7 @@ import exploretwo from "../../../public/8explore2.svg";
 import explorethree from "../../../public/8explore3.svg";
 import explorefour from "../../../public/8explore4.svg";
 interface EightProps {
-  refEight: React.RefObject<HTMLDivElement | null>;
+  refEight?: React.RefObject<HTMLDivElement | null>;
 }
 
 const Eight = ({ refEight }: EightProps) => {

@@ -7,7 +7,7 @@ import exploretwo from "../../../public/9explore2.svg";
 import explorethree from "../../../public/9explore3.svg";
 import explorefour from "../../../public/9explore4.svg";
 interface NineProps {
-  refNine: React.RefObject<HTMLDivElement | null>;
+  refNine?: React.RefObject<HTMLDivElement | null>;
 }
 
 const Nine = ({ refNine }: NineProps) => {

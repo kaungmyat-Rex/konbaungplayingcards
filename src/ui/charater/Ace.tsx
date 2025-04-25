@@ -7,7 +7,7 @@ import exploretwo from "../../../public/Aexplore2.svg";
 import explorethree from "../../../public/Aexplore3.svg";
 
 interface AceProps {
-  refAce: React.RefObject<HTMLDivElement | null>;
+  refAce?: React.RefObject<HTMLDivElement | null>;
 }
 
 const Ace = ({ refAce }: AceProps) => {

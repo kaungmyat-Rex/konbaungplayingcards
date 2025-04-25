@@ -7,7 +7,7 @@ import exploretwo from "../../../public/4explore2.svg";
 import explorethree from "../../../public/4explore3.svg";
 
 interface FourProps {
-  refFour: React.RefObject<HTMLDivElement | null>;
+  refFour?: React.RefObject<HTMLDivElement | null>;
 }
 
 const Four = ({ refFour }: FourProps) => {

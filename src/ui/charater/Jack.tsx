@@ -7,7 +7,7 @@ import exploretwo from "../../../public/Jexplore2.svg";
 import explorethree from "../../../public/Jexplore3.svg";
 
 interface JackProps {
-  refJack: React.RefObject<HTMLDivElement | null>;
+  refJack?: React.RefObject<HTMLDivElement | null>;
 }
 
 const Jack = ({ refJack }: JackProps) => {

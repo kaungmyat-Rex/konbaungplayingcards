@@ -6,7 +6,7 @@ import queenphototwo from "../../../public/Queenphoto2.svg";
 import queenphotothree from "../../../public/Queenphoto3.svg";
 import queenphotofour from "../../../public/Queenphoto4.svg";
 interface QueenProps {
-  refQueen: React.RefObject<HTMLDivElement | null>;
+  refQueen?: React.RefObject<HTMLDivElement | null>;
 }
 
 const Queen = ({ refQueen }: QueenProps) => {

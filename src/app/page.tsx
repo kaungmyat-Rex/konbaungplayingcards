@@ -8,17 +8,55 @@ import { SiGmail } from "react-icons/si";
 import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
 import CharatorList from "@/ui/CharatorList";
-import React, { useEffect } from "react";
+import React, { act, useEffect, useRef } from "react";
 import Shop from "@/ui/Shop";
 import { useActiveSection } from "@/context/activeSection";
 
+import King from "@/ui/charater/King";
+import Queen from "@/ui/charater/Queen";
+import Jack from "@/ui/charater/Jack";
+import Ace from "@/ui/charater/Ace";
+import Ten from "@/ui/charater/Ten";
+import Nine from "@/ui/charater/Nine";
+import Eight from "@/ui/charater/Eight";
+import Seven from "@/ui/charater/Seven";
+import Six from "@/ui/charater/Six";
+import Five from "@/ui/charater/Five";
+import Four from "@/ui/charater/Four";
+import Three from "@/ui/charater/Three";
+import Two from "@/ui/charater/Two";
+import { CARDS } from "@/constants/cardmenu";
+
+import leftKanot from "../../public/left corner kanote.svg";
+import rightKanot from "../../public/right corner kanote.svg";
+
 export default function Home() {
+  // menu ref group
   const mainref = React.useRef<HTMLDivElement>(null);
   const homeref = React.useRef<HTMLDivElement>(null);
   const shopref = React.useRef<HTMLDivElement>(null);
   const exploreref = React.useRef<HTMLDivElement>(null);
   const contactref = React.useRef<HTMLDivElement>(null);
 
+  // charator ref group
+  const refKing = useRef<HTMLDivElement>(null);
+  const refQueen = useRef<HTMLDivElement>(null);
+  const refJack = useRef<HTMLDivElement>(null);
+  const refTen = useRef<HTMLDivElement>(null);
+  const refNine = useRef<HTMLDivElement>(null);
+  const refEight = useRef<HTMLDivElement>(null);
+  const refSeven = useRef<HTMLDivElement>(null);
+  const refSix = useRef<HTMLDivElement>(null);
+  const refFive = useRef<HTMLDivElement>(null);
+  const refFour = useRef<HTMLDivElement>(null);
+  const refThree = useRef<HTMLDivElement>(null);
+  const refTwo = useRef<HTMLDivElement>(null);
+  const refAce = useRef<HTMLDivElement>(null);
+
+  const [activeModal, setActiveModal] = React.useState<boolean>(false);
+  const [activeId, setActiveId] = React.useState<number>(0);
+  const [activeFirstSlide, setActiveFirstSlide] = React.useState<number>(0);
+  const [activeSecondSlide, setActiveSecondSlide] = React.useState<number>(0);
   const { setActiveSection } = useActiveSection();
 
   useEffect(() => {
@@ -26,46 +64,26 @@ export default function Home() {
     const handleScroll = () => {
       const homeDiv = homeref.current?.offsetTop ?? 0;
       const shopDiv = shopref.current?.offsetTop ?? 0;
-      const exploreDiv = exploreref.current?.offsetTop ?? 0;
+      const exploreDiv = (refKing.current?.offsetTop ?? 0) - 300; // use kingref instead of exploreref
       const contactDiv = (contactref.current?.offsetTop ?? 0) - 500;
       const scrollPosition = Math.floor(mainref?.current?.scrollTop ?? 0);
-      // console.log("🚀 ~ handleScroll ~ scrollPosition:", scrollPosition);
 
       if (scrollPosition >= homeDiv && scrollPosition < shopDiv) {
         setActiveSection("home");
-        // console.log("it trigger 1");
-        // sliderRef?.current?.slickGoTo(0);
+        setActiveModal(false);
       } else if (scrollPosition >= shopDiv && scrollPosition < exploreDiv) {
         setActiveSection("shop");
-        // console.log("it trigger 2");
-        // sliderRef?.current?.slickGoTo(1);
+        setActiveModal(false);
       } else if (scrollPosition >= exploreDiv && scrollPosition < contactDiv) {
         setActiveSection("explore");
-        // console.log("it trigger 3");
-        // sliderRef?.current?.slickGoTo(2);
+        setActiveModal(true);
       } else if (scrollPosition >= contactDiv) {
+        setActiveModal(false);
         setActiveSection("contact");
-        // console.log("it trigger 4");
-        // sliderRef?.current?.slickGoTo(2);
       } else {
+        setActiveModal(false);
         setActiveSection("home");
-        // console.log("it trigger 5 to 1");
       }
-      // if (scrollPosition >= JackDiv && scrollPosition < queenDiv) {
-      //   console.log("trigger 3");
-      //   sliderRef?.current?.slickGoTo(2);
-      // } else if (scrollPosition >= queenDiv && scrollPosition < kingDiv) {
-      //   console.log("trigger 2");
-      //   sliderRef?.current?.slickGoTo(1);
-      // } else if (scrollPosition >= kingDiv) {
-      //   console.log("trigger 1");
-      //   sliderRef?.current?.slickGoTo(0);
-      // }
-      console.log("🚀 ~ handleScroll ~ contactDiv:", contactDiv);
-      // console.log("🚀 ~ handleScroll ~ scrollPosition:", scrollPosition);
-      // console.log("🚀 ~ handleScroll ~ homeDiv:", homeDiv);
-      // console.log("🚀 ~ handleScroll ~ shopDiv:", shopDiv);
-      // console.log("🚀 ~ handleScroll ~ exploreDiv:", exploreDiv);
     };
     if (!scrollEl) return;
 
@@ -76,8 +94,123 @@ export default function Home() {
     };
   }, []);
 
-  // snap-y snap-mandatory --main tag
-  // snap-end -- home and contact page tag
+  useEffect(() => {
+    const scrollEl = mainref?.current;
+    const handleScroll = () => {
+      const kingDiv = (refKing.current?.offsetTop ?? 0) - 300;
+      const queenDiv = (refQueen.current?.offsetTop ?? 0) - 300;
+
+      const JackDiv = (refJack.current?.offsetTop ?? 0) - 300;
+      const TenDiv = (refTen.current?.offsetTop ?? 0) - 300;
+      const nineDiv = (refNine.current?.offsetTop ?? 0) - 300;
+      const eightDiv = (refEight.current?.offsetTop ?? 0) - 300;
+      const sevenDiv = (refSeven.current?.offsetTop ?? 0) - 300;
+      const sixDiv = (refSix.current?.offsetTop ?? 0) - 300;
+      const fiveDiv = (refFive.current?.offsetTop ?? 0) - 300;
+      const fourDiv = (refFour.current?.offsetTop ?? 0) - 300;
+      const threeDiv = (refThree.current?.offsetTop ?? 0) - 300;
+      const twoDiv = (refTwo.current?.offsetTop ?? 0) - 300;
+      const aceDiv = (refAce.current?.offsetTop ?? 0) - 300;
+
+      // const testdiv = refKing.current?.offsetParent ?? 0;
+      // console.log("🚀 ~ handleScroll ~ testdiv:", kingDiv);
+      const scrollPosition = Math.floor(mainref?.current?.scrollTop ?? 0);
+      // console.log("🚀 ~ handleScroll ~ kingDiv:", kingDiv);
+
+      if (scrollPosition >= kingDiv && scrollPosition < queenDiv) {
+        setActiveFirstSlide(0);
+        setActiveSecondSlide(5);
+        setActiveId(0);
+      } else if (scrollPosition >= queenDiv && scrollPosition < JackDiv) {
+        setActiveFirstSlide(0);
+        setActiveSecondSlide(5);
+        setActiveId(1);
+      } else if (scrollPosition >= JackDiv && scrollPosition < TenDiv) {
+        setActiveFirstSlide(0);
+        setActiveSecondSlide(5);
+        setActiveId(2);
+      } else if (scrollPosition >= TenDiv && scrollPosition < nineDiv) {
+        setActiveFirstSlide(0);
+        setActiveSecondSlide(5);
+        setActiveId(3);
+      } else if (scrollPosition >= nineDiv && scrollPosition < eightDiv) {
+        setActiveFirstSlide(0);
+        setActiveSecondSlide(5);
+        setActiveId(4);
+      } else if (scrollPosition >= eightDiv && scrollPosition < sevenDiv) {
+        setActiveFirstSlide(5);
+        setActiveSecondSlide(10);
+        setActiveId(5);
+      } else if (scrollPosition >= sevenDiv && scrollPosition < sixDiv) {
+        setActiveFirstSlide(5);
+        setActiveSecondSlide(10);
+        setActiveId(6);
+      } else if (scrollPosition >= sixDiv && scrollPosition < fiveDiv) {
+        setActiveFirstSlide(5);
+        setActiveSecondSlide(10);
+        setActiveId(7);
+      } else if (scrollPosition >= fiveDiv && scrollPosition < fourDiv) {
+        setActiveFirstSlide(5);
+        setActiveSecondSlide(10);
+        setActiveId(8);
+      } else if (scrollPosition >= fourDiv && scrollPosition < threeDiv) {
+        setActiveFirstSlide(5);
+        setActiveSecondSlide(10);
+        setActiveId(9);
+      } else if (scrollPosition >= threeDiv && scrollPosition < twoDiv) {
+        setActiveFirstSlide(10);
+        setActiveSecondSlide(13);
+        setActiveId(10);
+      } else if (scrollPosition >= twoDiv && scrollPosition < aceDiv) {
+        setActiveFirstSlide(10);
+        setActiveSecondSlide(13);
+        setActiveId(11);
+      } else if (scrollPosition >= aceDiv) {
+        setActiveFirstSlide(10);
+        setActiveSecondSlide(13);
+        setActiveId(12);
+      } else {
+        setActiveFirstSlide(10);
+        setActiveSecondSlide(13);
+        setActiveId(12);
+      }
+      console.log("🚀 ~ handleScroll ~ scrollPosition:", scrollPosition);
+    };
+    if (!scrollEl) return;
+
+    scrollEl.addEventListener("scroll", handleScroll);
+
+    return () => {
+      scrollEl.removeEventListener("scroll", handleScroll);
+    };
+  }, [mainref]);
+
+  const nextActiveSlide = () => {
+    if (activeFirstSlide === 0) {
+      setActiveFirstSlide(5);
+      setActiveSecondSlide(10);
+    } else if (activeFirstSlide === 5) {
+      setActiveFirstSlide(10);
+      setActiveSecondSlide(13);
+    } else {
+      setActiveFirstSlide(0);
+      setActiveSecondSlide(5);
+    }
+  };
+
+  const prevActiveSlide = () => {
+    if (activeFirstSlide === 10) {
+      setActiveFirstSlide(5);
+      setActiveSecondSlide(10);
+    } else if (activeFirstSlide === 5) {
+      setActiveFirstSlide(0);
+      setActiveSecondSlide(5);
+    } else {
+      setActiveFirstSlide(10);
+      setActiveSecondSlide(13);
+    }
+  };
+
   return (
     <main ref={mainref} className="h-screen overflow-y-scroll scroll-smooth">
       <section
@@ -90,9 +223,83 @@ export default function Home() {
       <section id="shop" ref={shopref}>
         <Shop />
       </section>
-
-      <CharatorList mainref={mainref} exploreref={exploreref} />
-
+      <section ref={refKing} className="w-full h-auto px-5 md:px-20 relative">
+        <King />
+      </section>
+      <section ref={refQueen} className="w-full h-auto px-5 md:px-20 relative">
+        <Queen />
+      </section>
+      <section ref={refJack} className="w-full h-auto px-5 md:px-20 relative">
+        <Jack />
+      </section>
+      <section ref={refTen} className="w-full h-auto px-5 md:px-20 relative">
+        <Ten />
+      </section>
+      <section ref={refNine} className="w-full h-auto px-5 md:px-20 relative">
+        <Nine />
+      </section>
+      <section ref={refEight} className="w-full h-auto px-5 md:px-20 relative">
+        <Eight />
+      </section>
+      <section ref={refSeven} className="w-full h-auto px-5 md:px-20 relative">
+        <Seven />
+      </section>
+      <section ref={refSix} className="w-full h-auto px-5 md:px-20 relative">
+        <Six />
+      </section>
+      <section ref={refFive} className="w-full h-auto px-5 md:px-20 relative">
+        <Five />
+      </section>
+      <section ref={refFour} className="w-full h-auto px-5 md:px-20 relative">
+        <Four />
+      </section>
+      <section ref={refThree} className="w-full h-auto px-5 md:px-20 relative">
+        <Three />
+      </section>
+      <section ref={refTwo} className="w-full h-auto px-5 md:px-20 relative">
+        <Two />
+      </section>
+      <section ref={refAce} className="w-full h-auto px-5 md:px-20 relative">
+        <Ace />
+      </section>
+      {activeModal && (
+        <div className="fixed max-w-[250px] w-full bottom-[20px] left-[50%] -translate-x-[50%] border border-white rounded-lg backdrop-blur-lg p-3 z-30 ">
+          <div className="flex justify-center items-center relative">
+            <Image
+              onClick={() => prevActiveSlide()}
+              src={leftKanot}
+              alt="Lkanot"
+              className="rotate-45 absolute -left-[46px] w-[50px] -top-[3px] z-30 cursor-pointer"
+            />
+            <Image
+              onClick={() => nextActiveSlide()}
+              src={rightKanot}
+              alt="Rkanot"
+              className="rotate-45 absolute -right-[46px] w-[50px] -top-[8px] z-30 cursor-pointer"
+            />
+            {CARDS.slice(activeFirstSlide, activeSecondSlide).map((card) => {
+              return (
+                <div
+                  key={card.id}
+                  className={`border-r border-white w-[20%] text-center last:border-r-0`}
+                >
+                  <Link
+                    href={card.path}
+                    className={`${
+                      activeId === card.id
+                        ? "text-white font-extrabold text-[20px]"
+                        : "text-white/50 text-[17px] font-normal"
+                    } font-Nunito`}
+                  >
+                    {card.card}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+      {/* <CharatorList mainref={mainref} exploreref={exploreref} /> */}
       <section ref={contactref} id="contact" className="w-full h-full">
         <div className="relative w-full h-[500px]">
           <Image
@@ -155,6 +362,17 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="flex justify-center items-center py-2 relative">
+        <p className="text-white/75 font-Nunito font-normal text-sm md:text-sm">
+          ©2025 konbaungplayingcards. All rights reserved.
+        </p>
+        <span className="text-white/75 font-Nunito font-normal text-sm md:text-sm absolute right-2 bottom-2">
+          Developed by{" "}
+          <Link target="_blank" href={"https://kgmyat.vercel.app/"}>
+            kgmyat
+          </Link>
+        </span>
       </section>
     </main>
   );
