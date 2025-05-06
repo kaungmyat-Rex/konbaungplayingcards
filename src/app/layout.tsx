@@ -5,7 +5,9 @@ import "./swiper.css";
 import Header from "@/ui/layout/Header";
 import localFont from "next/font/local";
 import { ActiveSectionProvider } from "@/context/activeSection";
-
+import Image from "next/image";
+import leftKanot from "../../public/kanote_left.svg";
+import rightKanot from "../../public/kanote_right.svg";
 const burma = localFont({
   src: "../../public/fonts/BurmaRegular.ttf",
   display: "swap",
@@ -55,7 +57,32 @@ export default function RootLayout({
         className={`${NunitoPrimary.variable} ${MontserratHeader.variable} ${burma.variable} ${burmaBold.variable} ${SourceSerif.variable} ${elephant.variable} antialiased relative`}
       >
         <ActiveSectionProvider>
-          <div className="bodyMain"></div>
+          <div className="bodyMain">
+            <Image
+              src={leftKanot}
+              alt="Lkanot"
+              className="absolute left-0 top-[78px] w-[170px] opacity-20 -z-10"
+              objectFit="contain"
+            />
+            <Image
+              src={rightKanot}
+              alt="Rkanot"
+              className="absolute right-0 bottom-0 w-[170px] opacity-20 -z-10"
+              objectFit="contain"
+            />
+            <Image
+              src={leftKanot}
+              alt="Lkanot"
+              className="absolute right-0 top-[78px] w-[170px] opacity-20 -z-10 rotate-[90deg]"
+              objectFit="contain"
+            />
+            <Image
+              src={rightKanot}
+              alt="Rkanot"
+              className="absolute left-0 bottom-0 w-[170px] opacity-20 -z-10 rotate-[90deg]"
+              objectFit="contain"
+            />
+          </div>
           <Header />
 
           {children}

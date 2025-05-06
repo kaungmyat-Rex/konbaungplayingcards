@@ -6,9 +6,11 @@ import mockupThree from "../../public/MockUp_3.svg";
 import mockupFour from "../../public/MockUp_4.svg";
 import leftKanot from "../../public/kanote_left.svg";
 import rightKanot from "../../public/kanote_right.svg";
-import ayoteone from "../../public/ayote1.png";
-import ayotetwo from "../../public/ayote2.jpg";
-import ayotethree from "../../public/ayote3.jpg";
+import ayoteone from "../../public/ayote1.svg";
+import ayotetwo from "../../public/ayote2.svg";
+import ayotethree from "../../public/ayote3.svg";
+import ayotefour from "../../public/ayote4.svg";
+import ayotefive from "../../public/ayote5.svg";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiPokerHand } from "react-icons/gi";
 import Image from "next/image";
@@ -233,7 +235,7 @@ const Shop = () => {
           </div>
           <Image
             src={ayotetwo}
-            className="max-w-[600px] w-full object-contain mt-16"
+            className="max-w-[600px] w-full object-contain"
             alt="ayote2"
           />
           <div className="max-w-[600px] w-full relative p-12 mt-5 flex justify-center items-center ">
@@ -248,19 +250,19 @@ const Shop = () => {
               className="absolute w-[100px] right-[20px] md:bottom-10 bottom-0"
             />
             <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center w-full mt-3 md:mb-6">
-              Together, Pyit Tine Htaung and Phoe Wa visit children in their
-              dreams, filling them with strength, positivity and the reassurance
-              that they are never alone. A story passed down through generations
-              parents often tell their children about these two little spirits
-              before bedtime. Whether their child is anxious, crying or feeling
-              discouraged, the story of Pyit Tine Htaung and Phoe Wa provides
-              comfort and strength.
+              Phoe Wa (Embodiment of joy and warmth), radiates happiness
+              wherever he goes, effortlessly spreading smiles and laughter with
+              his endearing giggles and his danncing move. With a round,
+              cheerfil face and a contagious smile, "Phoe Wa" captures the
+              hearts of children across Myanmar. Join Phoe Wa on whimsical
+              journeys filled with laughter, imagination, and the spirit of
+              play!.
             </p>
           </div>
 
           <Image
             src={ayotethree}
-            className="max-w-[600px] w-full object-contain mt-16"
+            className="max-w-[600px] w-full object-contain"
             alt="ayote3"
           />
           <div className="max-w-[600px] w-full relative p-12 mt-5 flex justify-center items-center ">
@@ -275,61 +277,46 @@ const Shop = () => {
               className="absolute w-[100px] right-[20px] md:bottom-10 bottom-0"
             />
             <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center w-full mt-3 md:mb-6">
-              Together, Pyit Tine Htaung and Phoe Wa visit children in their
-              dreams, filling them with strength, positivity and the reassurance
-              that they are never alone. A story passed down through generations
-              parents often tell their children about these two little spirits
-              before bedtime.
+              Pyit Tine Htaung (The One Who Always Stands Back Up) is the iconic
+              symbol of resilience and spirit in Myanmar. Pyit Tine Htaung
+              reminds us that no matter the difficulties we face in life, we can
+              stand tall with courage and dignity. Join this charming figure on
+              a journey of empowerment, hope, and the celebration!
             </p>
           </div>
-          {/* <div className="relative max-w-[600px] w-full h-[500px] px-[20px]">
-            <Image
-              src={mockupThree}
-              className="max-w-[500px] w-full object-contain left-0 top-0 relative md:absolute"
-              alt="mk3"
-            />
-            <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center absolute md:w-[55%] w-[91%] md:bottom-[90px] bottom-[70px] right-[20px] md:right-0 ">
-              54 Playing cards including 13 Spades, 13 Hearts, 13 Diamonds, 13
-              Clubs and 2 Jokers
-            </p>
-          </div> */}
-          {/* <div className="relative max-w-[600px] w-full h-[300px] flex justify-center item-center px-[20px]">
-            <Image
-              src={mockupFour}
-              className="max-w-[350px] w-[300px] md:w-full object-contain md:absolute relative md:right-[70px] top-0"
-              alt="mk3"
-            />
-            <p className="text-white font-Nunito text-[20px] font-semibold text-center absolute md:left-20 md:bottom-[90px] left-[50%] -translate-x-[50%] -bottom-[20px] whitespace-nowrap">
-              1 Translation Guide Card
-            </p>
-          </div> */}
+          <Image
+            src={ayotefour}
+            className="max-w-[600px] w-full object-contain"
+            alt="ayote3"
+          />
+          <Image
+            src={ayotefive}
+            className="max-w-[600px] w-full object-contain"
+            alt="ayote3"
+          />
         </div>
-        <div className="flex-[4] flex justify-center items-center md:sticky top-20 p-[20px] mt-[100px] md:mt-0 md:p-0">
+        <div className="flex-[4] flex flex-col gap-y-5 justify-center items-center md:sticky top-20 p-[20px] mt-[100px] md:pt-[280px] md:mt-0 md:p-0 md:overflow-y-scroll h-[90dvh]">
           <div className="max-w-[400px] md:max-w-[300px] w-full border border-white rounded-lg p-5">
             <div className="flex justify-between items-center gap-x-2">
               <h4 className="font-Montserrat text-[17px] font-semibold text-white">
-                Kongbaung Royal Rank Playing Cards
+                Choose ONE Character
               </h4>
               <p className="font-Montserrat text-[17px] font-medium text-white">
                 ฿700 THB
               </p>
             </div>
-            <p className="font-Nunito text-[15px] font-normal text-white mt-3 text-justify">
-              You will receive one complete 54-card deck of Kongbaung Playing
-              Cards, featuring the full royal court ranks of the Konbaung
-              Dynasty — illustrated based on historic manuscripts, with every
-              number and title in Burmese script.
-            </p>
+
             <div className="mt-5 flex flex-col justify-center items-start gap-y-2">
               <p className="font-Nunito text-[15px] font-bold text-white">
-                Includes:
+                This package includes one art toy <br />
+                Options Include:
               </p>
               <span className="flex justify-center items-start gap-x-2">
                 <div>
                   <IoMdCheckmark color="white" className="text-[20px]" />
                 </div>
                 <p className="font-Nunito text-[15px] font-normal text-white">
-                  Full 54-card deck (Court, Military, Ministers, and more)
+                  Phoe Wa
                 </p>
               </span>
               <span className="flex justify-center items-start gap-x-2">
@@ -337,7 +324,67 @@ const Shop = () => {
                   <IoMdCheckmark color="white" className="text-[20px]" />
                 </div>
                 <p className="font-Nunito text-[15px] font-normal text-white">
-                  Burmese numerals and alphabet throughout
+                  Pyit Tine Htaung
+                </p>
+              </span>
+            </div>
+            <div className="mt-5 flex flex-col justify-center items-start gap-y-2">
+              <span>
+                <p className="font-Nunito text-[15px] font-normal text-white">
+                  *You can add ...THB more per additional character you wish to
+                  your order.
+                </p>
+              </span>
+              <span>
+                <p className="font-Nunito text-[15px] font-normal text-white">
+                  Perfect for collectors, gamers, culture lovers, and history
+                  nerds.
+                </p>
+              </span>
+              <span className="flex justify-center items-start gap-x-2">
+                <div>
+                  <FaTruckFast color="white" className="text-[20px]" />
+                </div>
+                <p className="font-Nunito text-[15px] font-normal text-white">
+                  Ships worldwide
+                </p>
+              </span>
+              <span className="flex justify-center items-start gap-x-2">
+                <div>
+                  <GiPokerHand color="white" className="text-[20px]" />
+                </div>
+                <p className="font-Nunito text-[15px] font-normal text-white">
+                  1 item included (+ optional add-ons)
+                </p>
+              </span>
+              <Link
+                href={"#contact"}
+                className="font-Nunito text-[16px] font-normal text-white border border-white w-full text-center rounded-md p-3 mt-3 hover:bg-white/25 transition-all duration-300 ease-in-out cursor-pointer"
+              >
+                Buy Now
+              </Link>
+            </div>
+          </div>
+          <div className="max-w-[400px] md:max-w-[300px] w-full border border-white rounded-lg p-5">
+            <div className="flex justify-between items-center gap-x-2">
+              <h4 className="font-Montserrat text-[17px] font-semibold text-white">
+                Full Set of TWO
+              </h4>
+              <p className="font-Montserrat text-[17px] font-medium text-white">
+                ฿700 THB
+              </p>
+            </div>
+
+            <div className="mt-5 flex flex-col justify-center items-start gap-y-2">
+              <p className="font-Nunito text-[15px] font-bold text-white">
+                This package includes a full set of two art toys:
+              </p>
+              <span className="flex justify-center items-start gap-x-2">
+                <div>
+                  <IoMdCheckmark color="white" className="text-[20px]" />
+                </div>
+                <p className="font-Nunito text-[15px] font-normal text-white">
+                  Phoe Wa
                 </p>
               </span>
               <span className="flex justify-center items-start gap-x-2">
@@ -345,7 +392,7 @@ const Shop = () => {
                   <IoMdCheckmark color="white" className="text-[20px]" />
                 </div>
                 <p className="font-Nunito text-[15px] font-normal text-white">
-                  Instruction + Translation card
+                  Pyit Tine Htaung
                 </p>
               </span>
             </div>
