@@ -226,12 +226,12 @@ const Shop = () => {
               className="absolute w-[100px] right-[20px] md:bottom-10 bottom-0"
             />
             <p className="text-white font-Nunito text-[15px] md:text-[20px] font-semibold text-center w-[95%] mb-6">
-              For over seventy years, Myanmar has endured the turmoil of
-              internal conflict, leaving its people to navigate a life of full
-              hardships and uncertainty. Children, too, have grown up in this
-              harsh reality, grappling with fear, trauma and a sense of
-              hopelessness. Yet, amidst these struggles, the people of Myanmar
-              hold onto stories of hope, resilience and joy.
+              Ayote is a creative brand founded by Khine Myint Ko, a Thai-based
+              Burmese artist passionate about restoring and sharing Myanmar
+              culture through 3D art toys. Each piece is designed with love to
+              bring Burmese stories to life in a fun, collectible form. Han Win
+              Htet and Khine Myint Ko are two friends working together to keep
+              our heritage alive. Thank you for supporting our journey!
             </p>
           </div>
           <Image
