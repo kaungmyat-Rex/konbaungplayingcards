@@ -11,6 +11,7 @@ import ayotetwo from "../../public/ayote2.svg";
 import ayotethree from "../../public/ayote3.svg";
 import ayotefour from "../../public/ayote4.svg";
 import ayotefive from "../../public/ayote5.svg";
+import ayoteSize from "../../public/ayoteSize.svg";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiPokerHand } from "react-icons/gi";
 import Image from "next/image";
@@ -285,6 +286,11 @@ const Shop = () => {
             </p>
           </div>
           <Image
+            src={ayoteSize}
+            className="max-w-[600px] w-full object-contain"
+            alt="ayote3"
+          />
+          <Image
             src={ayotefour}
             className="max-w-[600px] w-full object-contain"
             alt="ayote3"
@@ -302,7 +308,7 @@ const Shop = () => {
                 Choose ONE Character
               </h4>
               <p className="font-Montserrat text-[17px] font-medium text-white">
-                ฿700 THB
+                ฿3000 THB
               </p>
             </div>
 
@@ -371,7 +377,7 @@ const Shop = () => {
                 Full Set of TWO
               </h4>
               <p className="font-Montserrat text-[17px] font-medium text-white">
-                ฿700 THB
+                ฿5500 THB
               </p>
             </div>
 
