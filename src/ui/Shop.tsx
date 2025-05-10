@@ -229,9 +229,10 @@ const Shop = () => {
               Ayote is a creative brand founded by Khine Myint Ko, a Thai-based
               Burmese artist passionate about restoring and sharing Myanmar
               culture through 3D art toys. Each piece is designed with love to
-              bring Burmese stories to life in a fun, collectible form. Han Win
-              Htet and Khine Myint Ko are two friends working together to keep
-              our heritage alive. Thank you for supporting our journey!
+              bring Burmese stories to life in a fun, collectible form. Han
+              <br /> Win Htet and Khine Myint Ko are two friends working
+              together to keep our heritage alive. Thank you for supporting our
+              journey!
             </p>
           </div>
           <Image
@@ -301,7 +302,7 @@ const Shop = () => {
             alt="ayote3"
           />
         </div>
-        <div className="flex-[4] flex flex-col gap-y-5 justify-center items-center md:sticky top-20 p-[20px] mt-[100px] md:pt-[280px] md:mt-0 md:p-0 md:overflow-y-scroll h-[90dvh]">
+        <div className="flex-[4] flex flex-col gap-y-5 justify-center items-center md:sticky top-24 p-[20px] mt-[100px] md:pt-[280px] md:mt-[40px] md:p-0 md:overflow-y-scroll h-[90dvh]">
           <div className="max-w-[400px] md:max-w-[300px] w-full border border-white rounded-lg p-5">
             <div className="flex justify-between items-center gap-x-2">
               <h4 className="font-Montserrat text-[17px] font-semibold text-white">
