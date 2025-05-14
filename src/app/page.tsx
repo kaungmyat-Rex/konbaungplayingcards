@@ -345,7 +345,7 @@ export default function Home() {
                 INSTAGRAM
               </p>
               <Link
-                href="https://www.instagram.com/hansolo_2023/"
+                href="https://www.instagram.com/kon_baung_playing_cards?igsh=OHhnODNjNDB2eDR3"
                 target="_blank"
                 className="text-white font-Nunito font-normal text-sm"
               >
